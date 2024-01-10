@@ -1,0 +1,23 @@
+{
+  "name": "skapa",
+  "version": "1.0.0",
+  "description": "Starter theme for WordPress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx mix watch",
+    "build": "npx mix"
+  },
+  "author": "Mikael Eriksson",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.69.7",
+    "sass-loader": "^13.3.3"
+  },
+  "dependencies": {
+    "postcss-nested": "^6.0.1",
+    "tailwindcss": "^3.4.1"
+  }
+}

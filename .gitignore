@@ -1,0 +1,11 @@
+# Node modules
+node_modules
+
+# VSCode
+.vscode
+
+# .DS_Store (Mac)
+.DS_Store
+
+# Assets
+assets
