@@ -7,7 +7,7 @@ return [
     'display' => 'block',
     'sub_fields' => [
         [
-            'key' => 'field_page_modules_test_module_text',
+            'key' => SKAPA_PAGE_MODULES_PREFIX . 'test_module_text',
             'label' => __('Text', 'skapa'),
             'name' => 'text',
             'type' => 'text',
