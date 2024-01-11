@@ -38,36 +38,16 @@ class ACF_Fields extends Loader {
     public static function register_acf_groups() : void {
         if ( function_exists('acf_add_local_field_group') ) {
             acf_add_local_field_group( self::page_fields() );
+            acf_add_local_field_group( self::theme_settings_fields() );
         }
     }
 
     public static function page_fields() : array {
-        $fields = [
-            [
-                'key' => 'group_page_modules',
-				'name' => 'modules',
-				'label' => __('Modules', 'skapa'),
-				'type' => 'flexible_content',
-                'layouts' => [
-                    'test' => [
-                        'key' => 'group_page_modules_test',
-                        'name' => 'test',
-                        'label' => __('Test', 'skapa'),
-                        'display' => 'block',
-                        'sub_fields' => [
-                            [
-                                'key' => 'field_test',
-                                'name' => 'test',
-                                'label' => __('Test', 'skapa'),
-                                'type' => 'text',
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-        ];
+        define('SKAPA_PAGE_PREFIX', 'group_page_');
+        $fields = include_once( get_stylesheet_directory() . '/includes/fields/page-modules.php' );
+
         return [
-            'key' => 'group_page',
+            'key' => SKAPA_PAGE_PREFIX,
             'title' => __('Page fields', 'skapa'),
             'fields' => $fields,
             'location' => [
@@ -83,6 +63,25 @@ class ACF_Fields extends Loader {
 				'the_content',
 			],
 			'active' => true,
+        ];
+    }
+
+    public static function theme_settings_fields() : array {
+        $fields = include_once( get_stylesheet_directory() . '/includes/fields/theme-settings.php' );
+
+        return [
+            'key' => 'group_theme_settings',
+            'title' => __('Theme settings', 'skapa'),
+            'fields' => $fields,
+            'location' => [
+                [
+                    [
+                        'param' => 'options_page',
+                        'operator' => '==',
+                        'value' => 'theme-settings',
+                    ],
+                ]
+            ]
         ];
     }
 }
