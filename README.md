@@ -1,6 +1,6 @@
 # SKAPA
 
-A starter theme for WordPress sites. Built using ACF layouts which creates modules that pages are built from.
+A starter theme for WordPress sites, with Advanced Custom Fields and Tailwind CSS.
 
 ## Required WordPress plugins
 
