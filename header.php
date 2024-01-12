@@ -29,7 +29,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('group'); ?>>
 <?php wp_body_open(); ?>
 
 <?php get_template_part( '/templates/partials/navbar' ); ?>
