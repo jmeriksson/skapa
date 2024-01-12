@@ -21,6 +21,7 @@ class Theme_Setup extends Loader {
 		add_filter('upload_mimes', [ $this, 'allow_svg_uploads' ]);
         add_action('init', [ $this, 'add_editor_styles']);
         add_action('after_setup_theme', [ $this, 'load_textdomain']);
+        add_filter('nav_menu_link_attributes', [ $this, 'add_anchor_class' ], 10, 3);
 	}
 
     /**
@@ -101,5 +102,21 @@ class Theme_Setup extends Loader {
      */
     public function load_textdomain() {
         load_theme_textdomain('skapa', get_template_directory() . '/languages');
+    }
+
+    /**
+     * This filter adds a class to the anchor tag in the menu.
+     * The class is added if the menu item has the property add_anchor_class.
+     *
+     * @param Array $atts
+     * @param WP_Post $item
+     * @param stdClass $args
+     * @return void
+     */
+    public function add_anchor_class($atts, $item, $args) {
+        if (property_exists($args, 'add_anchor_class')) {
+            $atts['class'] = $args->add_anchor_class;
+        }
+        return $atts;
     }
 }

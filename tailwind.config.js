@@ -4,7 +4,12 @@ module.exports = {
     './templates/**/*.php',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'black': '#161616',
+        'white': '#f0f0f0'
+      }
+    },
   },
   plugins: [],
 }
