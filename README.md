@@ -15,6 +15,7 @@ Modules are the building blocks for pages in the Skapa theme. Create a new modul
 2. The newly created file should return the ACF fields needed for the module. For example, we could return this:
 ```php
 // simple-headline.php
+<?php
 
 return [
     'key' => SKAPA_PAGE_MODULES_PREFIX . 'simple_headline',
@@ -34,3 +35,26 @@ return [
 ```
 
 _Note that the `SKAPA_PAGE_MODULES_PREFIX` constant takes care of adding the correct prefix to the keys._
+3. Create a new file in the `templates/modules/` directory. The file should have the same name as the file containing the ACF fields for the module.
+4. All data from the ACF fields are passed to this file in an array called `$args`, so start by getting the data from this array and storing them in local variables:
+```php
+// simple-headline.php
+<?php
+
+$content = $args['content'] ?? null;
+```
+5. Next, build out the structure of the module using the data you have collected. For example:
+```php
+// simple-headline.php
+<?php
+
+$content = $args['content'] ?? null;
+
+?>
+<div class="container">
+    <?php if ($content) : ?>
+        <h1><?php echo esc_html($content); ?></h1>
+    <?php endif; ?>
+</div>
+```
+6. Your new module can now be added to a page :tada: 
