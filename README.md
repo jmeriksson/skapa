@@ -57,4 +57,4 @@ $content = $args['content'] ?? null;
     <?php endif; ?>
 </div>
 ```
-6. Your new module can now be added to a page :tada: 
+6. Your new module can now be added to a page! :tada: 

@@ -16,6 +16,7 @@ class ACF_Fields extends Loader {
     public function init() : void {
         add_action('acf/init', [ $this, 'add_options_page' ]);
         add_action( 'acf/init', [ $this, 'register_acf_groups' ] );
+        add_filter('acf/load_field/name=background_color', [ $this, 'register_background_colors' ], 10, 1);
     }
 
     /**
@@ -35,7 +36,7 @@ class ACF_Fields extends Loader {
 		}
     }
 
-    public static function register_acf_groups() : void {
+    public function register_acf_groups() : void {
         if ( function_exists('acf_add_local_field_group') ) {
             acf_add_local_field_group( self::page_fields() );
             acf_add_local_field_group( self::theme_settings_fields() );
@@ -83,5 +84,14 @@ class ACF_Fields extends Loader {
                 ]
             ]
         ];
+    }
+
+    public function register_background_colors( array $field ) : array {
+        $field['choices'] = [
+            'white' => __('White', 'skapa'),
+            'black' => __('Black', 'skapa')
+        ];
+
+        return $field;
     }
 }
