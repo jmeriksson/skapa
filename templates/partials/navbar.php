@@ -18,16 +18,10 @@ $logo = get_field('logo', 'options') ?? null;
                     <span><?php echo esc_html( get_bloginfo('name') ); ?></span>
                 <?php endif; ?>
             </a>
-            <div>
+            <div class="flex flex-row">
                 <?php
-                    $desktop_menu_args = [
-                        'theme_location' => 'primary_menu',
-                        'container' => false,
-                        'echo' => true,
-                        'menu_class' => 'list-none m-0 p-0 flex flex-row gap-8 h-full',
-                        'add_anchor_class' => 'flex items-center h-full hover:underline'
-                    ];
-                    wp_nav_menu($desktop_menu_args)
+                    do_action('skapa_render_desktop_menu');
+                    do_action('skapa_render_mobile_menu_toggle');
                 ?>
             </div>
         </div>

@@ -77,7 +77,7 @@ class Theme_Setup extends Loader {
 		wp_enqueue_style( 'skapa_styles', get_template_directory_uri() . '/assets/css/skapa.css', [], $style_modified );
 
 		// Enqueue main scripts from assets directory
-		wp_enqueue_script( 'skapa_scripts', get_template_directory_uri() . '/assets/javascript/skapa.js', [], $script_modified, true );
+		wp_enqueue_script( 'skapa_scripts', get_template_directory_uri() . '/assets/javascript/skapa.js', ['jquery'], $script_modified, true );
 	}
 
 	/**
