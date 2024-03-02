@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './templates/**/*.php',
     './includes/**/*.php',
+    './resources/css/**/*.css',
   ],
   theme: {
     extend: {
@@ -18,6 +19,11 @@ module.exports = {
           'light': '#f6f6f6',
           'DEFAULT': '#f0f0f0',
           'dark': '#eaeaea',
+        },
+        'tertiary': {
+          'light': '#ffd5bd',
+          'DEFAULT': '#ffbe98',
+          'dark': '#ffb488',
         },
       },
       fontFamily: {
@@ -43,6 +49,11 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('postcss-import'),
+    require('postcss-nested'),
+    require('tailwindcss'),
+    require('autoprefixer')
+  ],
 }
 

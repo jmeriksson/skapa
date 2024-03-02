@@ -27,5 +27,6 @@ return [
         'label' => __('Modules', 'skapa'),
         'type' => 'flexible_content',
         'layouts' => skapa_get_page_module_layouts(),
+        'button_label' => __('Add module', 'skapa'),
     ]
 ];

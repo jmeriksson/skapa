@@ -5,7 +5,6 @@
 jQuery(document).ready(function($) {
 	// skapaToggleOffcanvas
 	$('body').on('skapaToggleOffcanvas', () => {
-		console.log('skapaToggleOffcanvas')
 		$('body').toggleClass('offcanvas-is-open');
 	})
 })

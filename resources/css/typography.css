@@ -16,10 +16,41 @@ h4, .h4 {
 	@apply font-serif text-lg lg:text-xl;
 }
 
+h5, .h5 {
+	@apply font-sans text-lg lg:text-xl tracking-wide;
+}
+
+h6, .h6 {
+	@apply font-sans text-base lg:text-lg tracking-wide underline;
+}
+
 .module-primary {
 	@apply bg-primary text-secondary;
 }
 
 .module-secondary {
 	@apply bg-secondary text-primary;
+}
+
+p {
+	@apply font-extralight text-base lg:text-lg;
+}
+
+p:not(:last-of-type) {
+	@apply mb-4;
+}
+
+.wysiwyg h1:not(:first-child),
+.wysiwyg .h1:not(:first-child),
+.wysiwyg h2:not(:first-child),
+.wysiwyg .h2:not(:first-child),
+.wysiwyg h3:not(:first-child),
+.wysiwyg .h3:not(:first-child),
+.wysiwyg h4:not(:first-child),
+.wysiwyg .h4:not(:first-child),
+.wysiwyg h5:not(:first-child),
+.wysiwyg .h5:not(:first-child),
+.wysiwyg h6:not(:first-child),
+.wysiwyg .h6:not(:first-child) {
+	@apply my-4;
 }
