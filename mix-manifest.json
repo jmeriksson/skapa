@@ -10,5 +10,16 @@
     "/assets/images/favicon/favicon.ico": "/assets/images/favicon/favicon.ico",
     "/assets/images/favicon/mstile-150x150.png": "/assets/images/favicon/mstile-150x150.png",
     "/assets/images/favicon/safari-pinned-tab.svg": "/assets/images/favicon/safari-pinned-tab.svg",
-    "/assets/images/favicon/site.webmanifest": "/assets/images/favicon/site.webmanifest"
+    "/assets/images/favicon/site.webmanifest": "/assets/images/favicon/site.webmanifest",
+    "/assets/images/icons/envelope.svg": "/assets/images/icons/envelope.svg",
+    "/assets/images/icons/facebook.svg": "/assets/images/icons/facebook.svg",
+    "/assets/images/icons/instagram.svg": "/assets/images/icons/instagram.svg",
+    "/assets/images/icons/linkedin.svg": "/assets/images/icons/linkedin.svg",
+    "/assets/images/icons/pinterest.svg": "/assets/images/icons/pinterest.svg",
+    "/assets/images/icons/tiktok.svg": "/assets/images/icons/tiktok.svg",
+    "/assets/images/icons/viber.svg": "/assets/images/icons/viber.svg",
+    "/assets/images/icons/vimeo.svg": "/assets/images/icons/vimeo.svg",
+    "/assets/images/icons/whatsapp.svg": "/assets/images/icons/whatsapp.svg",
+    "/assets/images/icons/x.svg": "/assets/images/icons/x.svg",
+    "/assets/images/icons/youtube.svg": "/assets/images/icons/youtube.svg"
 }

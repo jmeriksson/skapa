@@ -2,5 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Import all custom CSS. */
 @import "typography.css";
 @import "utilities.css";
+@import "footer.css";

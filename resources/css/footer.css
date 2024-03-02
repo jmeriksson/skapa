@@ -1,0 +1,15 @@
+.footer-primary {
+	@apply bg-primary text-secondary;
+}
+
+.footer-primary a {
+	@apply text-secondary hover:text-secondary-dark;
+}
+
+.footer-secondary {
+	@apply bg-secondary text-primary;
+}
+
+.footer-secondary a {
+	@apply text-primary hover:text-primary-dark;
+}

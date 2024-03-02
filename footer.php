@@ -5,10 +5,9 @@
  * @package Skapa
  */
 
+get_template_part('/templates/partials/footer/footer');
+wp_footer();
+
 ?>
-
-<footer>Footer content</footer>
-
-<?php wp_footer(); ?>
 </body>
 </html>

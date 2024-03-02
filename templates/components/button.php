@@ -11,10 +11,12 @@ $default_args = [
     'target' => '_self',
     'color' => 'primary',
     'outline' => false,
+    'classes' => [],
 ];
 
 $args = wp_parse_args($args, $default_args);
-$button_classes = ['py-2 px-8 rounded font-sans no-underline hover:no-underline transition'];
+$button_classes = ['py-2 px-8 rounded font-sans no-underline hover:no-underline transition text-base md:text-lg w-fit uppercase'];
+$button_classes = array_merge($button_classes, $args['classes']);
 if ($args['color'] === 'secondary') {
     $button_classes[] = 'bg-secondary hover:bg-secondary-dark text-primary';
 } else {
@@ -23,11 +25,11 @@ if ($args['color'] === 'secondary') {
 ?>
 
 <?php if ($args['url']) : ?>
-    <a href="<?php echo esc_url($args['url']); ?>" class="<?php echo esc_attr(implode(' ', $button_classes)); ?>" target="<?php echo esc_attr($args['target']); ?>">
+    <a href="<?php echo esc_url($args['url']); ?>" class="<?php skapa_array_to_css_classes($button_classes); ?>" target="<?php echo esc_attr($args['target']); ?>">
         <?php echo esc_html($args['title']); ?>
     </a>
 <?php else : ?>
-    <button class="<?php echo esc_url($args['url']); ?>" class="<?php echo esc_attr(implode(' ', $button_classes)); ?>">
+    <button class="<?php echo esc_url($args['url']); ?>" class="<?php skapa_array_to_css_classes($button_classes); ?>">
         <?php echo esc_html($args['title']); ?>
     </button>
 <?php endif; ?>
