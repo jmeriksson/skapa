@@ -88,8 +88,8 @@ class ACF_Fields extends Loader {
 
     public function register_background_colors( array $field ) : array {
         $field['choices'] = [
-            'white' => __('White', 'skapa'),
-            'black' => __('Black', 'skapa')
+            'primary' => __('Primary', 'skapa'),
+            'secondary' => __('Secondary', 'skapa')
         ];
 
         return $field;

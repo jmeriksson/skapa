@@ -10,7 +10,7 @@ $button = $args['button'] ?? null;
 $background_classes = [''];
 
 if ($background_type === 'color' && $background_color) {
-    $background_classes[] = 'bg-' . $background_color;
+    $background_classes[] = 'module-' . $background_color;
 }
 
 ?>
@@ -24,12 +24,23 @@ if ($background_type === 'color' && $background_color) {
                 <?php endif; ?>
 
                 <?php if ($subheading) : ?>
-                    <p><?php echo esc_html($subheading); ?></p>
+                    <p class="h3 font-sans"><?php echo esc_html($subheading); ?></p>
                 <?php endif; ?>
 
-                <?php if ($button) : ?>
-                    <a href="<?php echo esc_url($button['url']); ?>"><?php echo esc_html($button['title']); ?></a>
-                <?php endif; ?>
+                <?php
+                if ($button) {
+                    get_template_part(
+                        'templates/components/button',
+                        null,
+                        [
+                            'title' => $button['title'],
+                            'url' => $button['url'],
+                            'color' => 'primary',
+                            'target' => $button['target'],
+                        ]
+                    );
+                }
+                ?>
             </div>
         </div>
 

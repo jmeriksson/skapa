@@ -51,7 +51,7 @@ return [
             'instructions' => __('Select a color that will be used as the background for the hero.', 'skapa'),
             'choices' => [],
             'required' => 1,
-            'default_value' => 'white',
+            'default_value' => 'primary',
             'conditional_logic' => [
                 [
                     [

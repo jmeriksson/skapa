@@ -8,7 +8,7 @@
 $logo = get_field('logo', 'options') ?? null;
 
 ?>
-<nav class="bg-black text-white">
+<nav class="bg-primary text-secondary">
     <div class="container">
         <div class="flex flex-row py-4 justify-between">
             <a href="<?php echo esc_url( get_home_url() ); ?>">
