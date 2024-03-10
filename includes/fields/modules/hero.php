@@ -141,11 +141,24 @@ return [
             'instructions' => __('Create a subheading for the hero.', 'skapa'),
         ],
         [
-            'key' => SKAPA_PAGE_MODULES_PREFIX. 'hero_button',
-            'label' => __('Button', 'skapa'),
-            'name' => 'button',
+            'key' => SKAPA_PAGE_MODULES_PREFIX. 'hero_button_primary',
+            'label' => __('Primary button', 'skapa'),
+            'name' => 'button_primary',
             'type' => 'link',
-            'instructions' => __('Create a button for the hero.', 'skapa'),
+            'instructions' => __('Create a primary button for the hero.', 'skapa'),
+            'wrapper' => [
+                'width' => 50,
+            ]
+        ],
+        [
+            'key' => SKAPA_PAGE_MODULES_PREFIX. 'hero_button_secondary',
+            'label' => __('Secondary button', 'skapa'),
+            'name' => 'button_secondary',
+            'type' => 'link',
+            'instructions' => __('Create a secondary button for the hero.', 'skapa'),
+            'wrapper' => [
+                'width' => 50,
+            ]
         ]
     ]
 ];
