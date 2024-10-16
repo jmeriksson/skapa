@@ -2,7 +2,7 @@
 /**
  * This class handles the footer and UI elements in the footer.
  * 
- * @package
+ * @package Skapa
  */
 
 namespace Skapa;
