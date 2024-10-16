@@ -1,6 +1,6 @@
 <?php
 /**
- * The Navbar for the Skapa theme.
+ * The header for the Skapa theme.
  * 
  * @package Skapa
  */
