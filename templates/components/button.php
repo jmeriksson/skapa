@@ -15,7 +15,7 @@ $default_args = [
 ];
 
 $args = wp_parse_args($args, $default_args);
-$button_classes = ['py-2 px-8 rounded font-sans no-underline hover:no-underline transition text-base md:text-lg w-fit uppercase'];
+$button_classes = ['py-2 px-8 rounded font-sans no-underline hover:no-underline transition text-base md:text-lg w-fit uppercase text-center'];
 $button_classes = array_merge($button_classes, $args['classes']);
 if ($args['outline'] && $args['color'] === 'primary') {
     $button_classes[] = 'border border-primary text-primary hover:bg-primary-light hover:text-secondary';
