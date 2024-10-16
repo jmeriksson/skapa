@@ -1,5 +1,6 @@
-jQuery(document).ready(function($) {
-	$('#js-mobile-menu-toggle').click(() => {
-		$('body').trigger('skapaToggleOffcanvas');
+
+document.addEventListener('DOMContentLoaded', function () {
+	document.getElementById('js-mobile-menu-toggle').addEventListener('click', () => {
+		document.body.dispatchEvent(new Event('skapaToggleOffcanvas'))
 	})
 })

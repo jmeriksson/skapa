@@ -1,9 +1,12 @@
-jQuery(document).ready(function($) {
+document.addEventListener('DOMContentLoaded', function () {
 	const handleCloseOffcanvas = () => {
-		$('body').trigger('skapaToggleOffcanvas');
+		document.body.dispatchEvent(new Event('skapaToggleOffcanvas'))
 	}
-	
-	$('#js-offcanvas-close').click(handleCloseOffcanvas);
-	$('.js-mobile-menu-item').click(handleCloseOffcanvas);
-	$('#js-offcanvas-overlay').click(handleCloseOffcanvas);
+
+	document.getElementById('js-offcanvas-close').addEventListener('click', handleCloseOffcanvas)
+	document.getElementById('js-offcanvas-overlay').addEventListener('click', handleCloseOffcanvas)
+	const menuItems = document.getElementsByClassName('js-mobile-menu-item')
+	for (let i = 0; i < menuItems.length; i++) {
+		menuItems[i].addEventListener('click', handleCloseOffcanvas)
+	}
 })
