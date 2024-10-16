@@ -260,5 +260,26 @@ return [
         'type' => 'wysiwyg',
         'media_upload' => 0,
         'tabs' => 'all',
+    ],
+    [
+        'key' => 'group_theme_settings_404_tab',
+        'label' => __('404', 'skapa'),
+        'type' => 'tab'
+    ],
+    [
+        'key' => 'group_theme_settings_404_heading',
+        'label' => __('Heading', 'skapa'),
+        'name' => '404_heading',
+        'type' => 'text',
+        'default_value' => __('404 - Page not found', 'skapa')
+    ],
+    [
+        'key' => 'group_theme_settings_404_content',
+        'label' => __('Content', 'skapa'),
+        'name' => '404_content',
+        'type' => 'wysiwyg',
+        'default_value' => __('The page you are looking for does not exist.', 'skapa'),
+        'media_upload' => 0,
+        'tabs' => 'all',
     ]
 ];
