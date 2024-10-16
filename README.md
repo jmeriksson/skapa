@@ -1,14 +1,30 @@
 # SKAPA
-
 A starter theme for WordPress sites, with Advanced Custom Fields and Tailwind CSS.
 
 ## Required WordPress plugins
-
 * [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/)
 * [Classic Editor](https://wordpress.org/plugins/classic-editor/)
 
-## Adding a new page module
+## Working with this theme
+This theme has not been officially published as it is meant to serve as a boilerplate for building custom WordPress themes. In order to work with this theme you need to fo the following.
 
+### Prerequisites
+* You need to have `node` and `npm` installed on your local machine.
+* You need a working WordPress installation on your local machine.
+
+### Local installation
+1. Clone this repository and place it in the theme directory of a WordPress site on your local machine.
+2. Open a terminal and navigate into the root directory of this theme.
+3. Run `npm install`.
+4. Run `npm start`.
+5. Activate the Skapa theme from your WordPress administration area.
+
+### Setting up the theme
+* The theme is built with a static homepage in mind, so you should create a page and set it as the homepage in Settings > Reading.
+* You should create a menu by going to Appearance > Menus, and give it the "Primary menu" location.
+* All settings that are global and related to the theme are located in Theme Settings.
+
+## Adding a new page module
 Modules are the building blocks for pages in the Skapa theme. Create a new module by following these steps.
 
 1. Create a new file in the `includes/fields/modules/` directory. The file name should be the module name in _kebab-case_ and it must be unique. If you want to build a module called "Simple Headline", the file name should be `simple-headline.php`.
