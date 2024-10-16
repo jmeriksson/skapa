@@ -9,7 +9,7 @@
 
 <div class="fixed inset-0 w-full h-screen overflow-hidden invisible group-[.offcanvas-is-open]:visible group-[.admin-bar]:top-[46px] min-[783px]:group-[.admin-bar]:top-[32px] z-50">
     <div id="js-offcanvas-overlay" class="absolute inset-0 w-full h-screen bg-primary/50 opacity-0 group-[.offcanvas-is-open]:opacity-100 transition-opacity"></div>
-    <div class="absolute h-screen w-11/12 bg-secondary top-0 -right-full group-[.offcanvas-is-open]:right-0 py-2 px-4 transition-all">
+    <div id="offcanvas-menu" class="absolute h-screen w-11/12 bg-secondary top-0 -right-full group-[.offcanvas-is-open]:right-0 py-2 px-4 transition-all">
         <div class="flex flex-col">
             <button
                 id="js-offcanvas-close" 
@@ -20,15 +20,15 @@
             </button>
             <nav>
                 <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'primary_menu',
-                        'container' => '',
-                        'menu_class' => 'flex flex-col',
-                        'menu_id' => 'js-offcanvas-menu',
-                        'add_anchor_class' => 'block w-full py-4 text-lg text-center hover:text-primary-dark js-mobile-menu-item'
-                    )
-                );
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'primary_menu',
+                            'container' => '',
+                            'menu_class' => 'flex flex-col',
+                            'menu_id' => 'js-offcanvas-menu',
+                            'add_anchor_class' => 'block w-full py-4 text-lg text-center hover:text-primary-dark js-mobile-menu-item'
+                        )
+                    );
                 ?>
             </nav>
         </div>
