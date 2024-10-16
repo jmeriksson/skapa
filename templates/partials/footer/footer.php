@@ -71,7 +71,15 @@ $colspan = $working_hours_display && $contact_details_display ? 'lg:col-span-6' 
             <?php endif; ?>
             <?php if ($footer_bottom) : ?>
                 <div class="col-span-1 col-span-full border-t border-secondary pt-8 mt-8">
-                    <?php echo wp_kses_post( $footer_bottom ); ?>
+                    <?php
+                        get_template_part(
+                            'templates/components/wysiwyg',
+                            null,
+                            [
+                                'content' => $footer_bottom
+                            ]
+                        );
+                    ?>
                 </div>
             <?php endif; ?>
         </div>
