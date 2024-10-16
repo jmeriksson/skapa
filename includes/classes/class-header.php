@@ -26,7 +26,7 @@ class Header extends Loader {
     public function render_desktop_menu() : void {
         $desktop_menu_args = [
             'theme_location' => 'primary_menu',
-            'container' => 'div',
+            'container' => 'nav',
             'container_class' => 'hidden md:block',
             'echo' => true,
             'menu_class' => 'list-none m-0 p-0 flex flex-row gap-8 h-full',

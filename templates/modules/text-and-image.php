@@ -29,7 +29,7 @@ if ($layout === 'text-right') {
 
 ?>
 
-<div class="<?php skapa_array_to_css_classes($module_classes); ?>">
+<section class="<?php skapa_array_to_css_classes($module_classes); ?>">
     <div class="absolute w-full h-full inset-0 z-0 lg:hidden">
         <figure class="h-full opacity-10">
             <?php
@@ -105,4 +105,4 @@ if ($layout === 'text-right') {
             </div>
         </div>
     </div>
-</div>
+</section>

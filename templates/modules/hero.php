@@ -76,7 +76,7 @@ if ($overlay) {
 
 ?>
 
-<div>
+<section>
     <div class='<?php skapa_array_to_css_classes($background_classes); ?>'>
         <?php if ($background_type === 'image' && $background_image) : ?>
             <figure class='<?php skapa_array_to_css_classes($aspect_ratio_classes); ?>'>
@@ -145,4 +145,4 @@ if ($overlay) {
             </div>
         </div>
     </div>
-</div>
+</section>

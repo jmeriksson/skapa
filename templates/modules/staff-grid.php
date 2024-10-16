@@ -30,7 +30,7 @@ if ($grid_length >= 4) {
 
 ?>
 
-<div class="<?php skapa_array_to_css_classes($module_classes); ?>">
+<section class="<?php skapa_array_to_css_classes($module_classes); ?>">
     <div class="container">
         <?php
         if (isset($heading) && !empty($heading)) {
@@ -49,4 +49,4 @@ if ($grid_length >= 4) {
             ?>
         </div>
     </div>
-</div>
+</section>

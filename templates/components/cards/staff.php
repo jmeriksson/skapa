@@ -25,7 +25,7 @@ $description = get_field('description', $id) ?? null;
 
 ?>
 
-<div>
+<article>
     <figure class="aspect-[3/4]">
         <?php
         if (isset($featured_image) && !empty($featured_image)) {
@@ -50,4 +50,4 @@ $description = get_field('description', $id) ?? null;
     <?php if (isset($description) && !empty($description)) : ?>
         <p class="mt-4"><?php echo esc_html($description); ?></p>
     <?php endif; ?>
-</div>
+</article>

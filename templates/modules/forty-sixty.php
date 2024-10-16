@@ -15,7 +15,7 @@ $module_classes = array_merge($module_classes, skapa_module_background_color($ba
 
 ?>
 
-<div class="<?php skapa_array_to_css_classes($module_classes); ?>">
+<section class="<?php skapa_array_to_css_classes($module_classes); ?>">
     <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div class="lg:col-span-5">
@@ -46,4 +46,4 @@ $module_classes = array_merge($module_classes, skapa_module_background_color($ba
             </div>
         </div>
     </div>
-</div>
+</section>

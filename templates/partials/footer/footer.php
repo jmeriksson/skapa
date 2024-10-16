@@ -19,7 +19,7 @@ if (!$working_hours_display && !$contact_details_display) {
 
 ?>
 
-<div class="footer-<?php echo esc_attr($background_color); ?>">
+<footer class="footer-<?php echo esc_attr($background_color); ?>">
     <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-12 py-16 gap-8 lg:gap-6">
             <?php if ($working_hours_display) : ?>
@@ -55,17 +55,17 @@ if (!$working_hours_display && !$contact_details_display) {
                     };
                     ?>
                     <?php if ($contact_details) : ?>
-                        <div class="grid grid-cols-1 gap-4 text-center">
+                        <address class="grid grid-cols-1 gap-4 text-center not-italic">
                             <?php
                                 foreach ($contact_details as $contact_detail) {
                                     $template_name = 'templates/partials/footer/contact-details/' . str_replace('_', '-', $contact_detail['acf_fc_layout']);
                                     get_template_part($template_name, '', $contact_detail);
                                 };
                             ?>
-                        </div>
+                        </address>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
         </div>
     </div>
-</div>
+</footer>
