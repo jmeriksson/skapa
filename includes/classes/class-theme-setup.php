@@ -18,7 +18,6 @@ class Theme_Setup extends Loader {
 		add_action('after_setup_theme', [ $this, 'register_menus' ]);
 		add_action('after_setup_theme', [ $this, 'theme_supports' ]);
 		add_action('wp_enqueue_scripts', [ $this, 'add_theme_scripts_and_styles' ]);
-		add_filter('upload_mimes', [ $this, 'allow_svg_uploads' ]);
         add_action('init', [ $this, 'add_editor_styles']);
         add_action('after_setup_theme', [ $this, 'load_textdomain']);
         add_filter('nav_menu_link_attributes', [ $this, 'add_anchor_class' ], 10, 3);
@@ -78,17 +77,6 @@ class Theme_Setup extends Loader {
 
 		// Enqueue main scripts from assets directory
 		wp_enqueue_script( 'skapa_scripts', get_template_directory_uri() . '/assets/javascript/skapa.js', [], $script_modified, true );
-	}
-
-	/**
-	 * Filter for allowing SVG uploads.
-	 *
-	 * @param Array $mime_types
-	 * @return Array $mime_types filtered
-	 */
-	public function allow_svg_uploads( $mime_types ) {
-		$mime_types['svg'] = 'image/svg+xml';
-		return $mime_types;
 	}
 
     public function add_editor_styles() {

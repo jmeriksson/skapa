@@ -37,6 +37,11 @@ class ACF_Fields extends Loader {
 		}
     }
 
+    /**
+     * Registers ACF field groups.
+     * 
+     * @return void
+     */
     public function register_acf_groups() : void {
         if (function_exists('acf_add_local_field_group')) {
             acf_add_local_field_group(self::page_fields());
@@ -45,6 +50,11 @@ class ACF_Fields extends Loader {
         }
     }
 
+    /**
+     * Returns an array for setting up the page field group.
+     * 
+     * @return array
+     */
     public static function page_fields() : array {
         define('SKAPA_PAGE_PREFIX', 'group_page_');
         $fields = include_once(get_stylesheet_directory() . '/includes/fields/page-modules.php');
@@ -69,6 +79,11 @@ class ACF_Fields extends Loader {
         ];
     }
 
+    /**
+     * Returns an array for setting up the theme settings field group.
+     * 
+     * @return array
+     */
     public static function theme_settings_fields() : array {
         $fields = include_once(get_stylesheet_directory() . '/includes/fields/theme-settings.php');
 
@@ -88,6 +103,11 @@ class ACF_Fields extends Loader {
         ];
     }
 
+    /**
+     * Registers theme colors for ACF fields.
+     * 
+     * @param array
+     */
     public function register_theme_colors(array $field) : array {
         $field['choices'] = [
             'primary' => __('Primary', 'skapa'),
@@ -97,6 +117,11 @@ class ACF_Fields extends Loader {
         return $field;
     }
 
+    /**
+     * Returns an array representing the background color clone field group.
+     * 
+     * @return array
+     */
     public static function module_background_color_clone() : array {
         $fields = [
             [

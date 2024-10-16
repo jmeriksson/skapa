@@ -8,7 +8,6 @@
 namespace Skapa;
 
 class Post_Type_Staff extends Loader {
-
     /**
      * The post type name.
      */
@@ -93,7 +92,7 @@ class Post_Type_Staff extends Loader {
      */
     public static function register_acf_fields() : void {
         if (function_exists('acf_add_local_field_group')) {
-            \acf_add_local_field_group([
+            acf_add_local_field_group([
                 'key' => 'group_staff_fields',
                 'name' => 'staff_fields',
                 'title' => __('Staff', 'skapa'),

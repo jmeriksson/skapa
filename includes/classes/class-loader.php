@@ -8,7 +8,6 @@
 namespace Skapa;
 
 abstract class Loader {
-
 	/**
 	 * Class constructor. Make sure extending classes initialize themselves upon creation.
 	 *
@@ -17,6 +16,7 @@ abstract class Loader {
 	public function __construct() {
 		$this->init();
 	}
+
 	/**
 	 * Init function for extending classes to implement.
 	 *
