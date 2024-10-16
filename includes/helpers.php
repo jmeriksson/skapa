@@ -6,12 +6,21 @@
  */
 
 if (!function_exists('skapa_module_background_classes')) {
+    /**+
+     * Returns an array of base classes for the modules.
+     */
     function skapa_module_background_classes() : array {
         return ['py-11 lg:py-16'];
     }
 }
 
 if (!function_exists('skapa_module_background_color')) {
+    /**
+     * Returns an array of class names for background color and text color.
+     *
+     * @param string $background_color Background color to use.
+     * @return array
+     */
     function skapa_module_background_color(string $background_color) : array {
         switch ($background_color) {
             case 'secondary':

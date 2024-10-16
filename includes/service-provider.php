@@ -1,6 +1,6 @@
 <?php
 /**
- * Holds all classes.
+ * Requires and initializes all classes.
  *
  * @package Skapa
  */

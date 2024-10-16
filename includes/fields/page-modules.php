@@ -6,6 +6,9 @@
 define('SKAPA_PAGE_MODULES_PREFIX', SKAPA_PAGE_PREFIX . 'modules_');
 
 if (! function_exists( 'skapa_get_page_module_layouts' )) {
+    /**
+     * Loops through all PHP files in the modules directory and returns an array of layouts from them.
+     */
     function skapa_get_page_module_layouts() {
         $layouts = [];
         $modules_directory = get_stylesheet_directory() . '/includes/fields/modules';
