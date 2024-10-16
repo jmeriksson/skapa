@@ -60,10 +60,10 @@ class Post_Type_Staff extends Loader {
 		$args = [
 			'name' => __('Staff', 'skapa'),
 			'labels' => $labels,
-			'public' => true,
+			'public' => false,
 			'show_ui' => true,
 			'show_in_menu' => true,
-			'show_in_nav_menu' => true,
+			'show_in_nav_menus' => false,
 			'show_in_admin_bar' => true,
 			'show_in_rest' => true,
 			'menu_position' => 10,
