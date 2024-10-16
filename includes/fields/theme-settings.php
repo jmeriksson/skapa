@@ -40,6 +40,20 @@ return [
         'type' => 'true_false',
         'default_value' => false,
         'ui' => true,
+        'wrapper' => [
+            'width' => 50
+        ],
+    ],
+    [
+        'key' => 'group_theme_settings_footer_contact_details_display',
+        'label' => __('Display contact details in the footer?', 'skapa'),
+        'name' => 'contact_details_display',
+        'type' => 'true_false',
+        'default_value' => false,
+        'ui' => true,
+        'wrapper' => [
+            'width' => 50
+        ],
     ],
     [
         'key' => 'group_theme_settings_footer_working_hours_heading',
@@ -90,14 +104,6 @@ return [
                 ]
             ],
         ]
-    ],
-    [
-        'key' => 'group_theme_settings_footer_contact_details_display',
-        'label' => __('Display contact details in the footer?', 'skapa'),
-        'name' => 'contact_details_display',
-        'type' => 'true_false',
-        'default_value' => false,
-        'ui' => true,
     ],
     [
         'key' => 'group_theme_settings_footer_contact_details_heading',
@@ -245,5 +251,14 @@ return [
                 ]
             ]
         ]
+    ],
+    [
+        'key' => 'group_theme_settings_footer_bottom',
+        'label' => __('Footer bottom', 'skapa'),
+        'name' => 'footer_bottom',
+        'instructions' => esc_html__('This content will be displayed at the bottom of the footer.', 'skapa'),
+        'type' => 'wysiwyg',
+        'media_upload' => 0,
+        'tabs' => 'all',
     ]
 ];

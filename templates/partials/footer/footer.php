@@ -12,10 +12,13 @@ $working_hours = get_field('working_hours', 'options') ?? null;
 $contact_details_display = get_field('contact_details_display', 'options') ?? false;
 $contact_details_heading = get_field('contact_details_heading', 'options') ?? null;
 $contact_details = get_field('contact_details', 'options') ?? null;
+$footer_bottom = get_field('footer_bottom', 'options') ?? null;
 
-if (!$working_hours_display && !$contact_details_display) {
+if (!$working_hours_display && !$contact_details_display && !$footer_bottom) {
     return;
 }
+
+$colspan = $working_hours_display && $contact_details_display ? 'lg:col-span-6' : 'lg:col-span-full';
 
 ?>
 
@@ -23,7 +26,7 @@ if (!$working_hours_display && !$contact_details_display) {
     <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-12 py-16 gap-8 lg:gap-6">
             <?php if ($working_hours_display) : ?>
-                <div class="col-span-1 lg:col-span-6">
+                <div class="col-span-1 <?php echo esc_attr($colspan) ?>">
                     <?php
                     if (isset($working_hours_heading) && !empty($working_hours_heading)) {
                         skapa_render_heading(
@@ -44,7 +47,7 @@ if (!$working_hours_display && !$contact_details_display) {
                 </div>
             <?php endif; ?>
             <?php if ($contact_details_display) : ?>
-                <div class="col-span-1 lg:col-span-6">
+                <div class="col-span-1 <?php echo esc_attr($colspan) ?>">
                     <?php
                     if (isset($contact_details_heading) && !empty($contact_details_heading)) {
                         skapa_render_heading(
@@ -64,6 +67,11 @@ if (!$working_hours_display && !$contact_details_display) {
                             ?>
                         </address>
                     <?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <?php if ($footer_bottom) : ?>
+                <div class="col-span-1 col-span-full border-t border-secondary pt-8 mt-8">
+                    <?php echo wp_kses_post( $footer_bottom ); ?>
                 </div>
             <?php endif; ?>
         </div>
