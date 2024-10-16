@@ -28,8 +28,8 @@ class ACF_Fields extends Loader {
     public function add_options_page() : void {
         if (function_exists('acf_add_options_page')) {
 			$settings = [
-				'page_title' => __('Theme settings', 'skapa'),
-				'menu_title' => __('Theme settings', 'skapa'),
+				'page_title' => esc_html__('Theme settings', 'skapa'),
+				'menu_title' => esc_html__('Theme settings', 'skapa'),
 				'menu_slug' => 'theme-settings',
 				'icon_url' => 'dashicons-admin-site-alt3',
 			];
@@ -61,7 +61,7 @@ class ACF_Fields extends Loader {
 
         return [
             'key' => SKAPA_PAGE_PREFIX,
-            'title' => __('Page fields', 'skapa'),
+            'title' => esc_html__('Page fields', 'skapa'),
             'fields' => $fields,
             'location' => [
 				[
@@ -89,7 +89,7 @@ class ACF_Fields extends Loader {
 
         return [
             'key' => 'group_theme_settings',
-            'title' => __('Theme settings', 'skapa'),
+            'title' => esc_html__('Theme settings', 'skapa'),
             'fields' => $fields,
             'location' => [
                 [
@@ -110,8 +110,8 @@ class ACF_Fields extends Loader {
      */
     public function register_theme_colors(array $field) : array {
         $field['choices'] = [
-            'primary' => __('Primary', 'skapa'),
-            'secondary' => __('Secondary', 'skapa')
+            'primary' => esc_html__('Primary', 'skapa'),
+            'secondary' => esc_html__('Secondary', 'skapa')
         ];
 
         return $field;
@@ -126,12 +126,12 @@ class ACF_Fields extends Loader {
         $fields = [
             [
                 'key' => SKAPA_PAGE_MODULES_PREFIX . 'background_color',
-                'label' => __('Background color', 'skapa'),
+                'label' => esc_html__('Background color', 'skapa'),
                 'name' => 'background_color',
                 'type' => 'button_group',
                 'choices' => [
-                    'primary' => __('Primary', 'skapa'),
-                    'secondary' => __('Secondary', 'skapa')
+                    'primary' => esc_html__('Primary', 'skapa'),
+                    'secondary' => esc_html__('Secondary', 'skapa')
                 ]
             ]
         ];

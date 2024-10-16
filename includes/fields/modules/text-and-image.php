@@ -7,25 +7,25 @@
 
 return [
     'key' => SKAPA_PAGE_MODULES_PREFIX . 'text_and_image',
-    'label' => __('Text and image', 'skapa'),
+    'label' => esc_html__('Text and image', 'skapa'),
     'name' => 'text_and_image',
     'display' => 'block',
     'sub_fields' => [
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'text_and_image_content_tab',
-            'label' => __('Content', 'skapa'),
+            'label' => esc_html__('Content', 'skapa'),
             'type' => 'tab',
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'text_and_image_layout',
-            'label' => __('Layout', 'skapa'),
+            'label' => esc_html__('Layout', 'skapa'),
             'name' => 'layout',
             'type' => 'button_group',
-            'instructions' => __('Select the layout of this module.', 'skapa'),
+            'instructions' => esc_html__('Select the layout of this module.', 'skapa'),
             'required' => 1,
             'choices' => [
-                'text-left' => __('Text to the left', 'skapa'),
-                'text-right' => __('Text to the right', 'skapa'),
+                'text-left' => esc_html__('Text to the left', 'skapa'),
+                'text-right' => esc_html__('Text to the right', 'skapa'),
             ],
             'wrapper' => [
                 'width' => '50'
@@ -33,10 +33,10 @@ return [
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'text_and_image_image',
-            'label' => __('Image', 'skapa'),
+            'label' => esc_html__('Image', 'skapa'),
             'name' => 'image',
             'type' => 'image',
-            'instructions' => __('Select an image to display.', 'skapa'),
+            'instructions' => esc_html__('Select an image to display.', 'skapa'),
             'required' => 1,
             'return_format' => 'id',
             'preview_size' => 'medium',
@@ -46,10 +46,10 @@ return [
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'text_and_image_heading',
-            'label' => __('Heading', 'skapa'),
+            'label' => esc_html__('Heading', 'skapa'),
             'name' => 'heading',
             'type' => 'text',
-            'instructions' => __('Enter the heading for this module.', 'skapa'),
+            'instructions' => esc_html__('Enter the heading for this module.', 'skapa'),
             'required' => 1,
             'wrapper' => [
                 'width' => '70'
@@ -57,15 +57,15 @@ return [
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'text_and_image_heading_size',
-            'label' => __('Heading size', 'skapa'),
+            'label' => esc_html__('Heading size', 'skapa'),
             'name' => 'heading_size',
             'type' => 'button_group',
-            'instructions' => __('Select the size of the heading for this module. Note that the H1 size should only be used once per page.', 'skapa'),
+            'instructions' => esc_html__('Select the size of the heading for this module. Note that the H1 size should only be used once per page.', 'skapa'),
             'required' => 1,
             'choices' => [
-                'h1' => __('H1', 'skapa'),
-                'h2' => __('H2', 'skapa'),
-                'h3' => __('H3', 'skapa'),
+                'h1' => esc_html__('H1', 'skapa'),
+                'h2' => esc_html__('H2', 'skapa'),
+                'h3' => esc_html__('H3', 'skapa'),
             ],
             'default_value' => 'h2',
             'wrapper' => [
@@ -74,26 +74,26 @@ return [
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'text_and_image_wysiwyg',
-            'label' => __('Text', 'skapa'),
+            'label' => esc_html__('Text', 'skapa'),
             'name' => 'wysiwyg',
             'type' => 'wysiwyg',
             'media_upload' => 0,
             'delay' => 1,
             'tabs' => 'all',
             'toolbar' => 'full',
-            'instructions' => __('Enter the text content for this module.', 'skapa'),
+            'instructions' => esc_html__('Enter the text content for this module.', 'skapa'),
             'required' => 0,
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'text_and_image_button',
-            'label' => __('Button', 'skapa'),
+            'label' => esc_html__('Button', 'skapa'),
             'name' => 'button',
             'type' => 'link',
-            'instructions' => __('Add a button to this module (optional).', 'skapa'),
+            'instructions' => esc_html__('Add a button to this module (optional).', 'skapa'),
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'text_and_image_settings_tab',
-            'label' => __('Settings', 'skapa'),
+            'label' => esc_html__('Settings', 'skapa'),
             'type' => 'tab',
         ],
         [

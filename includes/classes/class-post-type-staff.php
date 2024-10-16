@@ -35,30 +35,30 @@ class Post_Type_Staff extends Loader {
 			'singular_name' => $singular_name,
 			'add_new' => _x('Add new', 'education', 'skapa'),
 			// translators: post type singular name
-			'add_new_item' => sprintf(__('Add new %s', 'skapa'), $singular_name),
+			'add_new_item' => sprintf(esc_html__('Add new %s', 'skapa'), $singular_name),
 			// translators: post type singular name
-			'edit_item' => sprintf(__('Edit %s', 'skapa'), $singular_name),
+			'edit_item' => sprintf(esc_html__('Edit %s', 'skapa'), $singular_name),
 			// translators: post type singular name
-			'new_item' => sprintf(__('New %s', 'skapa'), $singular_name),
+			'new_item' => sprintf(esc_html__('New %s', 'skapa'), $singular_name),
 			// translators: post type singular name
-			'view_item' => sprintf(__('View %s', 'skapa'), $singular_name),
+			'view_item' => sprintf(esc_html__('View %s', 'skapa'), $singular_name),
 			// translators: post type plural name
-			'view_items' => sprintf(__('View %s', 'skapa'), $plural_name),
+			'view_items' => sprintf(esc_html__('View %s', 'skapa'), $plural_name),
 			// translators: post type plural name
-			'search_items' => sprintf(__('Search %s', 'skapa'), $plural_name),
+			'search_items' => sprintf(esc_html__('Search %s', 'skapa'), $plural_name),
 			// translators: post type plural name
-			'not_found' => sprintf(__('No %s found', 'skapa'), $plural_name),
+			'not_found' => sprintf(esc_html__('No %s found', 'skapa'), $plural_name),
 			// translators: post type plural name
-			'not_found_in_trash' => sprintf(__('No %s found in trash', 'skapa'), $plural_name),
+			'not_found_in_trash' => sprintf(esc_html__('No %s found in trash', 'skapa'), $plural_name),
 			// translators: post type plural name
-			'all_items' => sprintf(__('All %s', 'skapa'), $plural_name),
+			'all_items' => sprintf(esc_html__('All %s', 'skapa'), $plural_name),
 			// translators: post type singular name
-			'archives' => sprintf(__('%s archive', 'skapa'), $singular_name),
+			'archives' => sprintf(esc_html__('%s archive', 'skapa'), $singular_name),
 			// translators: post type singular name
-			'attributes' => sprintf(__('%s attributes', 'skapa'), $singular_name),
+			'attributes' => sprintf(esc_html__('%s attributes', 'skapa'), $singular_name),
 		];
 		$args = [
-			'name' => __('Staff', 'skapa'),
+			'name' => esc_html__('Staff', 'skapa'),
 			'labels' => $labels,
 			'public' => false,
 			'show_ui' => true,
@@ -95,36 +95,36 @@ class Post_Type_Staff extends Loader {
             acf_add_local_field_group([
                 'key' => 'group_staff_fields',
                 'name' => 'staff_fields',
-                'title' => __('Staff', 'skapa'),
+                'title' => esc_html__('Staff', 'skapa'),
                 'fields' => [
                     [
                         'key' => 'staff_fields_content_tab',
-                        'label' => __('Content', 'skapa'),
+                        'label' => esc_html__('Content', 'skapa'),
                         'type' => 'tab'
                     ],
                     [
                         'key' => 'staff_fields_pretty_title',
-                        'label' => __('Name to display', 'skapa'),
+                        'label' => esc_html__('Name to display', 'skapa'),
                         'name' => 'pretty_title',
                         'type' => 'text',
-                        'instructions' => __('The name to display on the website. If left blank, the name given in the top line will be used.', 'skapa'),
+                        'instructions' => esc_html__('The name to display on the website. If left blank, the name given in the top line will be used.', 'skapa'),
                         'wrapper' => [
                             'width' => '50'
                         ]
                     ],
                     [
                         'key' => 'staff_fields_position',
-                        'label' => __('Position', 'skapa'),
+                        'label' => esc_html__('Position', 'skapa'),
                         'name' => 'position',
                         'type' => 'text',
-                        'instructions' => __('The position of the staff member.', 'skapa'),
+                        'instructions' => esc_html__('The position of the staff member.', 'skapa'),
                         'wrapper' => [
                             'width' => '50'
                         ]
                     ],
                     [
                         'key' => 'staff_fields_description',
-                        'label' => __('Description', 'skapa'),
+                        'label' => esc_html__('Description', 'skapa'),
                         'name' => 'description',
                         'type' => 'textarea',
                         'rows' => 6,

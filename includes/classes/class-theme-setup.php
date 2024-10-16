@@ -30,10 +30,10 @@ class Theme_Setup extends Loader {
      */
     public function notice_theme_dependencies() : void {
         if (! class_exists('ACF')) {
-            echo '<div class="error"><p>' . __( 'Skapa theme requires Advanced Custom Fields plugin to be installed and activated.', 'skapa' ) . '</p></div>';
+            echo '<div class="error"><p>' . esc_html__( 'Skapa theme requires Advanced Custom Fields plugin to be installed and activated.', 'skapa' ) . '</p></div>';
         }
         if (! class_exists('Classic_Editor')) {
-            echo '<div class="error"><p>' . __( 'Skapa theme requires Classic Editor plugin to be installed and activated.', 'skapa' ) . '</p></div>';
+            echo '<div class="error"><p>' . esc_html__( 'Skapa theme requires Classic Editor plugin to be installed and activated.', 'skapa' ) . '</p></div>';
         }
     }
 
@@ -45,8 +45,8 @@ class Theme_Setup extends Loader {
 	public function register_menus() : void {
 		register_nav_menus(
 			[
-				'primary_menu' => __( 'Primary Menu', 'skapa' ),
-                'footer_menu' => __('Footer menu', 'skapa')
+				'primary_menu' => esc_html__( 'Primary Menu', 'skapa' ),
+                'footer_menu' => esc_html__('Footer menu', 'skapa')
 			]
 		);
 	}

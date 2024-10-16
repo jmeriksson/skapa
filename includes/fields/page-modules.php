@@ -27,9 +27,9 @@ return [
     [
         'key' => SKAPA_PAGE_MODULES_PREFIX,
         'name' => 'modules',
-        'label' => __('Modules', 'skapa'),
+        'label' => esc_html__('Modules', 'skapa'),
         'type' => 'flexible_content',
         'layouts' => skapa_get_page_module_layouts(),
-        'button_label' => __('Add module', 'skapa'),
+        'button_label' => esc_html__('Add module', 'skapa'),
     ]
 ];

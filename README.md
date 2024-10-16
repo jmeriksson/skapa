@@ -35,16 +35,16 @@ Modules are the building blocks for pages in the Skapa theme. Create a new modul
 
 return [
     'key' => SKAPA_PAGE_MODULES_PREFIX . 'simple_headline',
-    'label' => __('Simple Headline', 'skapa'),
+    'label' => esc_html__('Simple Headline', 'skapa'),
     'name' => 'simple_headline',
     'display' => 'block',
     'sub_fields' => [
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX. 'simple_headline_content',
-            'label' => __('Content', 'skapa'),
+            'label' => esc_html__('Content', 'skapa'),
             'name' => 'content',
             'type' => 'text',
-            'instructions' => __('Enter the content of the headline.', 'skapa'),
+            'instructions' => esc_html__('Enter the content of the headline.', 'skapa'),
         ]
     ]
 ];

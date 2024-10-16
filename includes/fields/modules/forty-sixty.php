@@ -7,21 +7,21 @@
 
 return [
     'key' => SKAPA_PAGE_MODULES_PREFIX . 'forty_sixty',
-    'label' => __('Forty sixty', 'skapa'),
+    'label' => esc_html__('Forty sixty', 'skapa'),
     'name' => 'forty_sixty',
     'display' => 'block',
     'sub_fields' => [
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX. 'forty_sixty_content_tab',
-            'label' => __('Content', 'skapa'),
+            'label' => esc_html__('Content', 'skapa'),
             'type' => 'tab',
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'forty_sixty_heading',
-            'label' => __('Heading', 'skapa'),
+            'label' => esc_html__('Heading', 'skapa'),
             'name' => 'heading',
             'type' => 'text',
-            'instructions' => __('Enter the heading for this module.', 'skapa'),
+            'instructions' => esc_html__('Enter the heading for this module.', 'skapa'),
             'required' => 1,
             'wrapper' => [
                 'width' => '70'
@@ -29,15 +29,15 @@ return [
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'forty_sixty_heading_size',
-            'label' => __('Heading size', 'skapa'),
+            'label' => esc_html__('Heading size', 'skapa'),
             'name' => 'heading_size',
             'type' => 'button_group',
-            'instructions' => __('Select the size of the heading for this module. Note that the H1 size should only be used once per page.', 'skapa'),
+            'instructions' => esc_html__('Select the size of the heading for this module. Note that the H1 size should only be used once per page.', 'skapa'),
             'required' => 1,
             'choices' => [
-                'h1' => __('H1', 'skapa'),
-                'h2' => __('H2', 'skapa'),
-                'h3' => __('H3', 'skapa'),
+                'h1' => esc_html__('H1', 'skapa'),
+                'h2' => esc_html__('H2', 'skapa'),
+                'h3' => esc_html__('H3', 'skapa'),
             ],
             'default_value' => 'h2',
             'wrapper' => [
@@ -46,10 +46,10 @@ return [
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'forty_sixty_wysiwyg',
-            'label' => __('Text', 'skapa'),
+            'label' => esc_html__('Text', 'skapa'),
             'name' => 'wysiwyg',
             'type' => 'wysiwyg',
-            'instructions' => __('Enter the text content for this module.', 'skapa'),
+            'instructions' => esc_html__('Enter the text content for this module.', 'skapa'),
             'required' => 0,
             'media_upload' => 0,
             'delay' => 1,
@@ -58,7 +58,7 @@ return [
         ],
         [
             'key' => SKAPA_PAGE_MODULES_PREFIX . 'forty_sixty_settings_tab',
-            'label' => __('Settings', 'skapa'),
+            'label' => esc_html__('Settings', 'skapa'),
             'type' => 'tab',
         ],
         [
