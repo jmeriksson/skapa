@@ -37,7 +37,9 @@ $published_date = get_the_date();
                     <?php the_post_thumbnail('medium_large', ['class' => 'w-full h-auto']); ?>
                 </figure>
             <?php endif; ?>
-            <?php the_content(); ?>
+            <div class="wysiwyg">
+                <?php the_content(); ?>
+            </div>
         </div>
     </div>
 </article>

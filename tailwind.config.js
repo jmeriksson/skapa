@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         'black': '#000000',
         'white': '#ffffff',
+        'blue': {
+          'light': '#5c5cff',
+          'DEFAULT': '#0000ee',
+          'dark': '#5200d6',
+        },
         'primary': {
           'light': '#404040',
           'DEFAULT': '#161616',

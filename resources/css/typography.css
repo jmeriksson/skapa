@@ -1,27 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-h1, .h1 {
+h1,
+.h1 {
 	@apply font-serif text-7xl lg:text-11xl;
 }
 
-h2, .h2 {
+h2,
+.h2 {
 	@apply font-serif text-3xl lg:text-7xl;
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	@apply font-serif text-xl lg:text-3xl;
 }
 
-h4, .h4 {
+h4,
+.h4 {
 	@apply font-serif text-lg lg:text-xl;
 }
 
-h5, .h5 {
-	@apply font-sans text-lg lg:text-xl tracking-wide;
+h5,
+.h5 {
+	@apply font-serif text-lg lg:text-xl tracking-wide;
 }
 
-h6, .h6 {
-	@apply font-sans text-base lg:text-lg tracking-wide underline;
+h6,
+.h6 {
+	@apply font-serif text-base lg:text-lg tracking-wide;
 }
 
 .module-primary {
@@ -32,12 +38,30 @@ h6, .h6 {
 	@apply bg-secondary text-primary;
 }
 
-p {
+p,
+ul,
+ol {
 	@apply font-extralight text-base lg:text-lg;
 }
 
-p:not(:last-of-type) {
-	@apply mb-4;
+p:not(:last-child),
+ul:not(:last-child),
+ol:not(:last-child),
+blockquote:not(:last-child),
+.wp-caption:not(:last-child) {
+	@apply mb-8;
+}
+
+ul {
+	@apply list-inside md:list-outside list-disc;
+}
+
+ol {
+	@apply list-inside md:list-outside list-decimal;
+}
+
+blockquote {
+	@apply pl-4 border-l border-primary;
 }
 
 .wysiwyg h1:not(:first-child),
@@ -53,4 +77,16 @@ p:not(:last-of-type) {
 .wysiwyg h6:not(:first-child),
 .wysiwyg .h6:not(:first-child) {
 	@apply my-4;
+}
+
+.wysiwyg a {
+	@apply text-blue underline hover:text-blue-light active:text-blue-dark;
+}
+
+.wysiwyg .wp-caption {
+	@apply max-w-full;
+}
+
+.wysiwyg .wp-caption-text {
+	@apply text-sm text-center;
 }
