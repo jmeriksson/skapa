@@ -32,4 +32,5 @@
 <body <?php body_class('group'); ?>>
 <?php wp_body_open(); ?>
 
+<?php get_template_part( '/templates/partials/skip-to-content' ); ?>
 <?php get_template_part( '/templates/partials/navbar' ); ?>

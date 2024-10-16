@@ -14,7 +14,7 @@ if ( function_exists( 'get_field' ) ) {
 
 ?>
 
-<main class="main">
+<main id="main" class="main">
     <?php 
     if ( $modules ) {
         foreach ( $modules as $module ) {
