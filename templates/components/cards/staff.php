@@ -28,13 +28,13 @@ $description = get_field('description', $id) ?? null;
 <article>
     <figure class="aspect-[3/4]">
         <?php
-        if (isset($featured_image) && !empty($featured_image)) {
-            echo $featured_image;  
-        } else {
-            ?>
-            <div class="w-full h-full bg-primary-light/20"></div>
-            <?php
-        }
+            if (isset($featured_image) && !empty($featured_image)) {
+                echo $featured_image;  
+            } else {
+                ?>
+                <div class="w-full h-full bg-primary-light/20"></div>
+                <?php
+            }
         ?>
     </figure>
     <?php

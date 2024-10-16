@@ -81,14 +81,14 @@ if ($overlay) {
         <?php if ($background_type === 'image' && $background_image) : ?>
             <figure class='<?php skapa_array_to_css_classes($aspect_ratio_classes); ?>'>
                 <?php
-                echo wp_get_attachment_image(
-                    $background_image,
-                    'large',
-                    false,
-                    [
-                        'class' => 'object-cover w-full h-full',
-                    ]
-                );
+                    echo wp_get_attachment_image(
+                        $background_image,
+                        'large',
+                        false,
+                        [
+                            'class' => 'object-cover w-full h-full',
+                        ]
+                    );
                 ?>
             </figure>
         <?php endif; ?>
@@ -109,35 +109,35 @@ if ($overlay) {
                     <?php if ($button_primary || $button_secondary) : ?>
                         <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-4">
                             <?php
-                            if ($button_primary) {
-                                get_template_part(
-                                    'templates/components/button',
-                                    null,
-                                    [
-                                        'title' => $button_primary['title'],
-                                        'url' => $button_primary['url'],
-                                        'color' => $button_primary_color,
-                                        'target' => $button_primary['target'],
-                                        'classes' => ['w-full sm:w-auto']
-                                    ]
-                                );
-                            }
+                                if ($button_primary) {
+                                    get_template_part(
+                                        'templates/components/button',
+                                        null,
+                                        [
+                                            'title' => $button_primary['title'],
+                                            'url' => $button_primary['url'],
+                                            'color' => $button_primary_color,
+                                            'target' => $button_primary['target'],
+                                            'classes' => ['w-full sm:w-auto']
+                                        ]
+                                    );
+                                }
                             ?>
                             <?php
-                            if ($button_secondary) {
-                                get_template_part(
-                                    'templates/components/button',
-                                    null,
-                                    [
-                                        'title' => $button_secondary['title'],
-                                        'url' => $button_secondary['url'],
-                                        'color' => $button_secondary_color,
-                                        'target' => $button_secondary['target'],
-                                        'outline' => true,
-                                        'classes' => ['w-full sm:w-auto']
-                                    ]
-                                );
-                            }
+                                if ($button_secondary) {
+                                    get_template_part(
+                                        'templates/components/button',
+                                        null,
+                                        [
+                                            'title' => $button_secondary['title'],
+                                            'url' => $button_secondary['url'],
+                                            'color' => $button_secondary_color,
+                                            'target' => $button_secondary['target'],
+                                            'outline' => true,
+                                            'classes' => ['w-full sm:w-auto']
+                                        ]
+                                    );
+                                }
                             ?>
                         </div>
                     <?php endif; ?>

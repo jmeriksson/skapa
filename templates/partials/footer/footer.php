@@ -28,13 +28,13 @@ $colspan = $working_hours_display && $contact_details_display ? 'lg:col-span-6' 
             <?php if ($working_hours_display) : ?>
                 <div class="col-span-1 <?php echo esc_attr($colspan) ?>">
                     <?php
-                    if (isset($working_hours_heading) && !empty($working_hours_heading)) {
-                        skapa_render_heading(
-                            $working_hours_heading,
-                            'h3',
-                            ['text-center mb-4 lg:mb-8']
-                        );
-                    };
+                        if (isset($working_hours_heading) && !empty($working_hours_heading)) {
+                            skapa_render_heading(
+                                $working_hours_heading,
+                                'h3',
+                                ['text-center mb-4 lg:mb-8']
+                            );
+                        };
                     ?>
                     <?php if ($working_hours) : ?>
                         <div class="grid grid-cols-2 gap-4 max-w-56 mx-auto">
@@ -49,13 +49,13 @@ $colspan = $working_hours_display && $contact_details_display ? 'lg:col-span-6' 
             <?php if ($contact_details_display) : ?>
                 <div class="col-span-1 <?php echo esc_attr($colspan) ?>">
                     <?php
-                    if (isset($contact_details_heading) && !empty($contact_details_heading)) {
-                        skapa_render_heading(
-                            $contact_details_heading,
-                            'h3',
-                            ['text-center mb-4 lg:mb-8']
-                        );
-                    };
+                        if (isset($contact_details_heading) && !empty($contact_details_heading)) {
+                            skapa_render_heading(
+                                $contact_details_heading,
+                                'h3',
+                                ['text-center mb-4 lg:mb-8']
+                            );
+                        };
                     ?>
                     <?php if ($contact_details) : ?>
                         <address class="grid grid-cols-1 gap-4 text-center not-italic">

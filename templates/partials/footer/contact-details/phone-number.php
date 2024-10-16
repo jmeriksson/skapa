@@ -17,11 +17,11 @@ if (!$value) {
 <div>
     <a target="_blank" href="tel:<?php echo esc_attr($value); ?>">
         <?php
-        if ($label) {
-            echo esc_html($label);
-        } else {
-            echo esc_html($value);
-        }
+            if ($label) {
+                echo esc_html($label);
+            } else {
+                echo esc_html($value);
+            }
         ?>
     </a>
 </div>

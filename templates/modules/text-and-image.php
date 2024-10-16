@@ -33,14 +33,14 @@ if ($layout === 'text-right') {
     <div class="absolute w-full h-full inset-0 z-0 lg:hidden">
         <figure class="h-full opacity-10">
             <?php
-            echo wp_get_attachment_image(
-                $image,
-                'full',
-                false,
-                [
-                    'class' => 'object-cover w-full h-full',
-                ]
-            );
+                echo wp_get_attachment_image(
+                    $image,
+                    'full',
+                    false,
+                    [
+                        'class' => 'object-cover w-full h-full',
+                    ]
+                );
             ?>
         </figure>
     </div>
@@ -49,56 +49,56 @@ if ($layout === 'text-right') {
             <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-16 lg:items-center ">
                 <div class="<?php skapa_array_to_css_classes($text_column_classes); ?>">
                     <?php
-                    if (isset($heading) && !empty($heading)) {
-                        skapa_render_heading(
-                            $heading,
-                            $heading_size,
-                            isset($background_color) && !empty($background_color) && $background_color === 'secondary'
-                                ? ['text-primary']
-                                : ['text-secondary']
-                        );
-                    }
+                        if (isset($heading) && !empty($heading)) {
+                            skapa_render_heading(
+                                $heading,
+                                $heading_size,
+                                isset($background_color) && !empty($background_color) && $background_color === 'secondary'
+                                    ? ['text-primary']
+                                    : ['text-secondary']
+                            );
+                        }
                     ?>
                     <?php
-                    if ($wysiwyg) {
-                        get_template_part(
-                            'templates/components/wysiwyg',
-                            null,
-                            [
-                                'content' => $wysiwyg,
-                            ]
-                        );
-                    }
+                        if ($wysiwyg) {
+                            get_template_part(
+                                'templates/components/wysiwyg',
+                                null,
+                                [
+                                    'content' => $wysiwyg,
+                                ]
+                            );
+                        }
                     ?>
                     <?php
-                    if ($button) {
-                        get_template_part(
-                            'templates/components/button',
-                            null,
-                            [
-                                'url' => $button['url'],
-                                'title' => $button['title'],
-                                'target' => $button['target'],
-                                'color' => isset($background_color) && !empty($background_color) && $background_color === 'secondary'
-                                    ? 'primary'
-                                    : 'secondary',
-                                'classes' => ['mx-auto lg:mx-0'],
-                            ]
-                        );
-                    }
+                        if ($button) {
+                            get_template_part(
+                                'templates/components/button',
+                                null,
+                                [
+                                    'url' => $button['url'],
+                                    'title' => $button['title'],
+                                    'target' => $button['target'],
+                                    'color' => isset($background_color) && !empty($background_color) && $background_color === 'secondary'
+                                        ? 'primary'
+                                        : 'secondary',
+                                    'classes' => ['mx-auto lg:mx-0'],
+                                ]
+                            );
+                        }
                     ?>
                 </div>
                 <div class="<?php skapa_array_to_css_classes($image_column_classes); ?>">
                     <figure class="h-full">
                         <?php
-                        echo wp_get_attachment_image(
-                            $image,
-                            'medium_large',
-                            false,
-                            [
-                                'class' => 'object-cover w-full h-full',
-                            ]
-                        );
+                            echo wp_get_attachment_image(
+                                $image,
+                                'medium_large',
+                                false,
+                                [
+                                    'class' => 'object-cover w-full h-full',
+                                ]
+                            );
                         ?>
                     </figure>
                 </div>
