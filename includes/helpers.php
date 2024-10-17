@@ -82,3 +82,23 @@ if (!function_exists('skapa_render_staff_card')) {
         );
     }
 }
+
+if (!function_exists('skapa_render_post_card')) {
+    /**
+     * Renders a post card component.
+     *
+     * @param WP_Post $post Post object.
+     * @param string $background_color Background to place card on.
+     * @return void
+     */
+    function skapa_render_post_card(WP_Post $post, string $background_color) : void {
+        echo get_template_part(
+            'templates/components/cards/post',
+            null,
+            [
+                'post_object' => $post,
+                'background_color' => $background_color
+            ]
+        );
+    }
+}
