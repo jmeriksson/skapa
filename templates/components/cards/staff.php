@@ -18,7 +18,7 @@ if (! isset($staff_post) || ! $staff_post || empty($staff_post)) {
 
 $title = $staff_post->post_title;
 $id = $staff_post->ID;
-$featured_image = get_the_post_thumbnail($id, 'large', ['class' => 'object-cover w-full h-full']);
+$featured_image = get_the_post_thumbnail($id, 'medium', ['class' => 'object-cover w-full h-full']);
 $pretty_title = get_field('pretty_title', $id) ?? null;
 $position = get_field('position', $id) ?? null;
 $description = get_field('description', $id) ?? null;
