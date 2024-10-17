@@ -32,6 +32,11 @@ Modules are the building blocks for pages in the Skapa theme. Create a new modul
 ```php
 // simple-headline.php
 <?php
+/**
+ * Simple Headline module ACF fields.
+ * 
+ * @package Skapa
+ */
 
 return [
     'key' => SKAPA_PAGE_MODULES_PREFIX . 'simple_headline',
@@ -57,6 +62,11 @@ _Note that the `SKAPA_PAGE_MODULES_PREFIX` constant takes care of adding the cor
 ```php
 // simple-headline.php
 <?php
+/**
+ * Module: Simple Headline
+ * 
+ * @package Skapa
+ */
 
 $content = $args['content'] ?? null;
 ```
@@ -64,6 +74,11 @@ $content = $args['content'] ?? null;
 ```php
 // simple-headline.php
 <?php
+/**
+ * Module: Simple Headline
+ * 
+ * @package Skapa
+ */
 
 $content = $args['content'] ?? null;
 
