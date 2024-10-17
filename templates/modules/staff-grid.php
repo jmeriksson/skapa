@@ -44,7 +44,7 @@ if ($grid_length >= 4) {
         <div class="<?php skapa_array_to_css_classes($grid_classes); ?>">
             <?php
                 foreach($staff_members as $staff_member) {
-                    skapa_render_staff_card($staff_member);
+                    skapa_render_staff_card($staff_member, $background_color);
                 }
             ?>
         </div>

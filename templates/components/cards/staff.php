@@ -18,10 +18,12 @@ if (! isset($staff_post) || ! $staff_post || empty($staff_post)) {
 
 $title = $staff_post->post_title;
 $id = $staff_post->ID;
-$featured_image = get_the_post_thumbnail($id, 'medium', ['class' => 'object-cover w-full h-full']);
+$featured_image = get_the_post_thumbnail($id, 'medium_large', ['class' => 'object-cover w-full h-full']);
 $pretty_title = get_field('pretty_title', $id) ?? null;
 $position = get_field('position', $id) ?? null;
 $description = get_field('description', $id) ?? null;
+$background_color = $args['background_color'] ?? 'primary';
+$fallback_image_color = $background_color === 'primary' ? 'bg-secondary-light/20' : 'bg-primary-light/20';
 
 ?>
 
@@ -32,7 +34,7 @@ $description = get_field('description', $id) ?? null;
                 echo $featured_image;  
             } else {
                 ?>
-                <div class="w-full h-full bg-primary-light/20"></div>
+                <div class="w-full h-full <?php echo esc_attr($fallback_image_color) ?>"></div>
                 <?php
             }
         ?>

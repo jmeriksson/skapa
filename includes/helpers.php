@@ -70,14 +70,16 @@ if (!function_exists('skapa_render_staff_card')) {
      * Renders a staff card component.
      *
      * @param WP_Post $staff_post Staff post object.
+     * @param string $background_color Background to place card on.
      * @return void
      */
-    function skapa_render_staff_card(WP_Post $staff_post) : void {
+    function skapa_render_staff_card(WP_Post $staff_post, string $background_color) : void {
         echo get_template_part(
             'templates/components/cards/staff',
             null,
             [
-                'post_object' => $staff_post
+                'post_object' => $staff_post,
+                'background_color' => $background_color
             ]
         );
     }
