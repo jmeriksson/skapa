@@ -78,7 +78,7 @@ if ($layout === 'text-right') {
                                 [
                                     'url' => $button['url'],
                                     'title' => $button['title'],
-                                    'target' => $button['target'],
+                                    'target' => isset($button['target']) && !empty($button['target']) ? $button['target'] : '_self',
                                     'color' => isset($background_color) && !empty($background_color) && $background_color === 'secondary'
                                         ? 'primary'
                                         : 'secondary',
