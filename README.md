@@ -1,8 +1,8 @@
 # SKAPA
-A starter theme for WordPress sites, with Advanced Custom Fields and Tailwind CSS.
+A starter theme for WordPress sites, with Advanced Custom Fields Pro and Tailwind CSS.
 
 ## Required WordPress plugins
-* [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/)
+* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/pro/)
 * [Classic Editor](https://wordpress.org/plugins/classic-editor/)
 
 ## Working with this theme
