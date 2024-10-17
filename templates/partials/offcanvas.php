@@ -24,7 +24,7 @@
                         array(
                             'theme_location' => 'primary_menu',
                             'container' => '',
-                            'menu_class' => 'flex flex-col',
+                            'menu_class' => 'flex flex-col list-none',
                             'menu_id' => 'js-offcanvas-menu',
                             'add_anchor_class' => 'block w-full py-4 text-lg text-center hover:text-primary-dark js-mobile-menu-item'
                         )
